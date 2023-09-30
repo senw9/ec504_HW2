@@ -94,7 +94,10 @@ int main(int argc, char *argv[])
   
   // Begin output  
   
-  ofstream outfile(strcat(argv[1],"_out"));
+  string inputFilename = argv[1];
+  string outputFilename = inputFilename + "_out";
+  ofstream outfile(outputFilename);
+
 
   /* Check first key against Key by Bisection  */
   cout << "Bisection " << find_index_bisection << " vs Dictionary " <<  find_index_dictionary << endl;
